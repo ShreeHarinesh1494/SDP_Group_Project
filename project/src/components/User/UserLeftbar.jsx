@@ -29,13 +29,11 @@ const UserLeftbar = () => {
   ];
 
   const handleLogout = () => {
-    // Perform any necessary logout logic here (e.g., clearing tokens, user data)
-    // Navigate to the home page
     navigate('/');
   };
 
   return (
-    <div className='h-screen w-1/6 flex flex-col justify-between items-center bg-card text-card-foreground pt-10 shadow-lg border-r border-gray-300'>
+    <div className='fixed h-screen w-1/6 flex flex-col justify-between items-center bg-card text-card-foreground pt-10 shadow-lg border-r border-gray-300'>
       <div className='w-full flex flex-col items-center'>
         {UserLinks.map((data, index) => (
           <li key={index} className='list-none w-[90%] my-2'>

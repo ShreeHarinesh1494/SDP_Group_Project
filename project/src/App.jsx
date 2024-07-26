@@ -13,7 +13,7 @@ import UserDashboard from "./Pages/User/UserDashboard";
 import UserGetPolicy from "./Pages/User/UserGetPolicy";
 import UserSupport from "./Pages/User/UserSupport";
 import UserLayout from "./layout/UserLayout";
-import USerFAQ from "./Pages/User/USerFAQ";
+import USerFAQ from "./Pages/User/UserFAQ";
 
 
 const App=()=>
