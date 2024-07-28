@@ -11,57 +11,46 @@ import {
 
 const data = [
   {
-    name: "Jan",
-    uv: 4000,
-    pv: 2400,
+    name: "VitalSecure Life Plan",
+    applied: 1500,
+    claimed: 800,
     amt: 2400
   },
   {
-    name: "Feb",
-    uv: 3000,
-    pv: 1398,
+    name: "EchoGuard Family Coverage",
+    applied: 3000,
+    claimed: 1398,
     amt: 2210
   },
   {
-    name: "Mar",
-    uv: 2000,
-    pv: 9800,
+    name: "Lifeline Assurance Policy",
+    applied: 2000,
+    claimed: 800,
     amt: 2290
   },
   {
-    name: "Apr",
-    uv: 2780,
-    pv: 3908,
+    name: "EchoFlex Term Insurance",
+    applied: 3580,
+    claimed: 908,
     amt: 2000
   },
   {
-    name: "May",
-    uv: 1890,
-    pv: 4800,
+    name: "VitalFuture Protection Plan",
+    applied: 1890,
+    claimed: 400,
     amt: 2181
-  },
-  {
-    name: "Jun",
-    uv: 2390,
-    pv: 3800,
-    amt: 2500
-  },
-  {
-    name: "Jul",
-    uv: 3490,
-    pv: 4300,
-    amt: 2100
   }
+  
 ];
 
 const AdminDashboard = () => {
   return (
-    <div className="flex flex-col items-center p-6">
-      <h1 className="text-2xl font-bold mb-4">Dashboard</h1>
-      <div className="w-full max-w-4xl bg-white p-6 rounded-lg shadow-lg">
+    <div className="flex flex-col items-center p-6 min-h-screen w-full">
+      <h1 className="text-2xl font-bold mb-4 ">Policy Performance</h1>
+      <div className="w-full max-w-6xl p-6 rounded-lg shadow-lg">
         <BarChart
-          width={500}
-          height={300}
+          width={1000}
+          height={500}  
           data={data}
           margin={{
             top: 5,
@@ -71,12 +60,12 @@ const AdminDashboard = () => {
           }}
         >
           <CartesianGrid strokeDasharray="3 3" />
-          <XAxis dataKey="name" />
+          <XAxis dataKey="name" tick={{ fill: 'black' }} />
           <YAxis />
-          <Tooltip />
-          <Legend />
-          <Bar dataKey="pv" fill="#8884d8" />
-          <Bar dataKey="uv" fill="#82ca9d" />
+          <Tooltip contentStyle={{ color: 'black' }} />
+          <Legend wrapperStyle={{ color: 'black' }} />
+          <Bar dataKey="applied" fill="#8884d8" />
+          <Bar dataKey="claimed" fill="#82ca9d" />
         </BarChart>
       </div>
     </div>

@@ -1,153 +1,3 @@
-// import React, { useState } from 'react'
-// import {
-//   Table,
-//   TableBody,
-//   TableCaption,
-//   TableCell,
-//   TableFooter,
-//   TableHead,
-//   TableHeader,
-//   TableRow,
-// } from "@/components/ui/table"
-
-// import { BellRing, Check, Plus } from "lucide-react"
-
-// import { cn } from "@/lib/utils"
-// import { Button } from "@/components/ui/button"
-// import {
-//   Card,
-//   CardContent,
-//   CardDescription,
-//   CardFooter,
-//   CardHeader,
-//   CardTitle,
-// } from "@/components/ui/card"
-// import { Input } from "@/components/ui/input"
-// import { Label } from "@/components/ui/label"
-// import {
-//   Sheet,
-//   SheetClose,
-//   SheetContent,
-//   SheetDescription,
-//   SheetFooter,
-//   SheetHeader,
-//   SheetTitle,
-//   SheetTrigger,
-// } from "@/components/ui/sheet"
-
-// const Users = () => {
-//   const [open, setOpen] = useState(false)
-//   const invoices = [
-//     {
-//       invoice: "INV001",
-//       paymentStatus: "Paid",
-//       totalAmount: "$250.00",
-//       paymentMethod: "Credit Card",
-//     },
-//     {
-//       invoice: "INV002",
-//       paymentStatus: "Pending",
-//       totalAmount: "$150.00",
-//       paymentMethod: "PayPal",
-//     },
-//     {
-//       invoice: "INV003",
-//       paymentStatus: "Unpaid",
-//       totalAmount: "$350.00",
-//       paymentMethod: "Bank Transfer",
-//     },
-//     {
-//       invoice: "INV004",
-//       paymentStatus: "Paid",
-//       totalAmount: "$450.00",
-//       paymentMethod: "Credit Card",
-//     },
-//     {
-//       invoice: "INV005",
-//       paymentStatus: "Paid",
-//       totalAmount: "$550.00",
-//       paymentMethod: "PayPal",
-//     },
-//     {
-//       invoice: "INV006",
-//       paymentStatus: "Pending",
-//       totalAmount: "$200.00",
-//       paymentMethod: "Bank Transfer",
-//     },
-//     {
-//       invoice: "INV007",
-//       paymentStatus: "Unpaid",
-//       totalAmount: "$300.00",
-//       paymentMethod: "Credit Card",
-//     },
-//   ]
-//   return (
-//     <>
-//       <Card>
-//         <CardHeader className='w-full flex flex-row justify-between items-center'>
-//           <CardTitle>Users</CardTitle>
-//           {/* <SheetTrigger> */}
-//           <Button onClick={()=>setOpen(!open)}>
-//             <Plus className='h-10 w-10 mr-2' /> Add
-//           </Button>
-//           {/* </SheetTrigger> */}
-//         </CardHeader>
-//         <CardContent>
-//           <Table>
-//             <TableHeader>
-//               <TableRow>
-//                 <TableHead className="w-[100px]">Invoice</TableHead>
-//                 <TableHead>Status</TableHead>
-//                 <TableHead>Method</TableHead>
-//                 <TableHead className="text-right">Amount</TableHead>
-//               </TableRow>
-//             </TableHeader>
-//             <TableBody>
-//               {invoices.map((invoice) => (
-//                 <TableRow key={invoice.invoice}>
-//                   <TableCell className="font-medium">{invoice.invoice}</TableCell>
-//                   <TableCell>{invoice.paymentStatus}</TableCell>
-//                   <TableCell>{invoice.paymentMethod}</TableCell>
-//                   <TableCell className="text-right">{invoice.totalAmount}</TableCell>
-//                 </TableRow>
-//               ))}
-//             </TableBody>
-//           </Table>
-//         </CardContent>
-//       </Card>
-
-//       <Sheet open={open} z-50>
-//         <SheetContent>
-//           <SheetHeader>
-//             <SheetTitle>Add User</SheetTitle>
-            
-//           </SheetHeader>
-//           <div className="grid gap-4 py-4">
-//             <div className="grid grid-cols-4 items-center gap-4">
-//               <Label htmlFor="name" className="text-right">
-//                 Name
-//               </Label>
-//               <Input id="name"  className="col-span-3" />
-//             </div>
-//             <div className="grid grid-cols-4 items-center gap-4">
-//               <Label htmlFor="username" className="text-right">
-//                 Username
-//               </Label>
-//               <Input id="username" className="col-span-3" />
-//             </div>
-//           </div>
-//           <SheetFooter className='flex flex-col flex-1'>
-//               <Button className='w-1/2 bg-destructive hover:bg-destructive/80' onClick={()=>setOpen(!open)}>Cancle</Button>
-//               <Button type="submit" className='w-1/2'>Save changes</Button>
-//           </SheetFooter>
-//         </SheetContent>
-//       </Sheet>
-//     </>
-//   )
-// }
-
-// export default Users
-
 import React, { useState } from 'react';
 import {
   Table,
@@ -184,41 +34,41 @@ const Users = () => {
   const [policies, setPolicies] = useState([
     {
       policyNo: "POL001",
-      policyName: "Life Coverage",
+      policyName: "VitalFuture Protection Plan",
       planMonths: 12,
       planYears: 1,
       policyHolderName: "John Doe",
       policyHolderAadhar: "1234 5678 9012",
       policyHolderPAN: "ABCDE1234F",
       nominee: "Jane Doe",
-      amount: "$500,000",
+      amount: "₹50,000",
       status: "", // "Accepted" or "Denied"
     },
     {
       policyNo: "POL002",
-      policyName: "Health Coverage",
+      policyName: "EchoFlex Term Insurance",
       planMonths: 24,
       planYears: 2,
       policyHolderName: "Alice Smith",
       policyHolderAadhar: "9876 5432 1098",
       policyHolderPAN: "XYZAB5678C",
       nominee: "Bob Smith",
-      amount: "$300,000",
+      amount: "₹30,000",
       status: "", // "Accepted" or "Denied"
     },
     {
       policyNo: "POL003",
-      policyName: "Car Insurance",
+      policyName: "Lifeline Assurance Polict",
       planMonths: 6,
       planYears: 0,
       policyHolderName: "Charlie Brown",
       policyHolderAadhar: "1357 2468 9023",
       policyHolderPAN: "LMNOP1234D",
       nominee: "Lucy Brown",
-      amount: "$150,000",
-      status: "", // "Accepted" or "Denied"
+      amount: "₹15,000",
+      status: "", 
     },
-    // Add more policies as needed
+    
   ]);
 
   const handleAccept = (policyNo) => {
@@ -248,10 +98,10 @@ const Users = () => {
     <>
       <Card>
         <CardHeader className='w-full flex flex-row justify-between items-center'>
-          <CardTitle>Policies</CardTitle>
-          <Button onClick={() => setOpen(true)}>
+          <CardTitle>User Policies</CardTitle>
+          {/* <Button onClick={() => setOpen(true)}>
             <Plus className='h-5 w-5 mr-2' /> Add Policy
-          </Button>
+          </Button> */}
         </CardHeader>
         <CardContent>
           <Table>
@@ -259,13 +109,13 @@ const Users = () => {
               <TableRow>
                 <TableHead className="w-[100px]">Policy No</TableHead>
                 <TableHead>Policy Name</TableHead>
-                <TableHead>Plan (Months/Years)</TableHead>
+                <TableHead>Duration (Months/Years)</TableHead>
                 <TableHead>Policy Holder Name</TableHead>
                 <TableHead>Policy Holder Aadhar No</TableHead>
                 <TableHead>Policy Holder PAN No</TableHead>
                 <TableHead>Nominee</TableHead>
                 <TableHead className="text-right">Amount</TableHead>
-                <TableHead className="text-right">Actions</TableHead>
+                <TableHead className="text-right w-[140px]">Actions</TableHead>
               </TableRow>
             </TableHeader>
             <TableBody>
@@ -327,7 +177,7 @@ const Users = () => {
             </div>
             <div className="grid grid-cols-4 items-center gap-4">
               <Label htmlFor="planMonths" className="text-right">
-                Plan (Months/Years)
+                Duration
               </Label>
               <Input id="planMonths" value={`${selectedPolicy?.planMonths || ''} Months / ${selectedPolicy?.planYears || ''} Years`} disabled className="col-span-3" />
             </div>

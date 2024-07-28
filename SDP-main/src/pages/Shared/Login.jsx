@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import SignInForm from './SignInForm';
 import SignUpForm from './SignUpForm';
 
+
 const Login = () => {
     const [isSignIn, setIsSignIn] = useState(true);
 
@@ -13,12 +14,12 @@ const Login = () => {
         <div className={`container flex min-h-screen relative ${isSignIn ? 'sign-in' : 'sign-up'}`}>
             <div className="row flex flex-wrap w-full h-full">
                 <div className="col w-full md:w-1/2 flex items-center justify-center text-center">
-                    <div className={`form-wrapper max-w-lg w-full p-4 bg-white rounded-2xl shadow-lg transition duration-500 ${isSignIn ? '' : 'hidden'}`}>
+                    <div className={`form-wrapper max-w-lg w-full p-4 rounded-2xl shadow-lg transition duration-500 ${isSignIn ? '' : 'hidden'}`}>
                         <SignInForm toggle={toggle} />
                     </div>
                 </div>
                 <div className="col w-full md:w-1/2 flex items-center justify-center text-center">
-                    <div className={`form-wrapper max-w-lg w-full p-4 bg-white rounded-2xl shadow-lg transition duration-500 ${isSignIn ? 'hidden' : ''}`}>
+                    <div className={`form-wrapper max-w-lg w-full p-4 rounded-2xl shadow-lg transition duration-500 ${isSignIn ? 'hidden' : ''}`}>
                         <SignUpForm toggle={toggle} />
                     </div>
                 </div>
@@ -41,4 +42,4 @@ const Login = () => {
     );
 };
 
-export default Login;
+export default Login

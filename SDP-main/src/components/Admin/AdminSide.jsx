@@ -41,8 +41,12 @@ const AdminSide = () => {
            
             <div className='h-1/6 flex flex-col gap-2 justify-start items-center p-5 border-b-4 border-gray-500 hover:border-customGreen font-bold mt-2 w-full'>
     <span className='flex flex-row items-center justify-start h-full w-full gap-2'>
+        <Link to='/'>
         <LogOut size={20} />
+        </Link>
+        <Link to='/'>
         Logout
+        </Link>
     </span>
 </div>
 

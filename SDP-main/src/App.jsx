@@ -7,7 +7,6 @@ import Register from './pages/Shared/Register'
 import UserLayout from './layout/UserLayout'
 import GetPlans from './pages/User/GetPlans'
 import Faq from './pages/User/Faq'
-import ExpertHelp from './pages/User/ExpertHelp'
 import AdminLayout from './layout/AdminLayout'
 import AdminDashboard from './pages/Admin/AdminDashboard'
 import UserDashboard from './pages/User/UserDashboard'
@@ -35,7 +34,7 @@ const App = () => {
                         <Route path='/user/dashboard' element={<UserDashboard />} />
                         <Route path='/user/plan' element={<GetPlans/>} />
                         <Route path='/user/faq' element={<Faq />} />
-                        <Route path='/user/help' element={<ExpertHelp/>} />
+                       
                     </Route>
                     
                     <Route element={<AdminLayout />}>

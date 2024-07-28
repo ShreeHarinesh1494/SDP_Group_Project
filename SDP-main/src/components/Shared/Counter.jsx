@@ -1,12 +1,13 @@
 import React from "react";
 import CountUp from "react-countup";
 
-export default function Counter({ number, title }) {
+const Counter=({ number, title })=> {
   return (
     <div className="number">
-      <CountUp duration={10} className="counter" end={number} />
+      <CountUp duration={30} className="counter" end={number} />
       <span>{title}</span>
     </div>
   );
 }
 
+export default Counter

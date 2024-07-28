@@ -6,6 +6,7 @@ import insure from './asserts/Insure.jpg'
 import AnimatedCounter from '@/components/Shared/AnimatedCounter';
 import Carousal from '@/components/Shared/Carousal';
 import Aboutus from '@/components/Shared/Aboutus';
+import PolicyCards from '@/components/Shared/PolicyCards';
 const Home = () => {
     return (
         <>
@@ -19,6 +20,7 @@ const Home = () => {
     <Aboutus />
 </div>
 
+       
 
             <div className="relative -mt-5"> {/* Adjust the -mt-10 value to reduce space */}
         <div className="flex items-center justify-center my-8 relative"> {/* Adjust my-8 to reduce vertical spacing */}
@@ -31,6 +33,7 @@ const Home = () => {
       <div className="mt-4"> {/* Adjust the mt-4 value as needed */}
         <AnimatedCounter />
       </div>
+       <PolicyCards/>
             <div className="relative -mt-5"> {/* Adjust the -mt-10 value to reduce space */}
         <div className="flex items-center justify-center my-8 relative"> {/* Adjust my-8 to reduce vertical spacing */}
           <div className="flex-grow border-t border-gray-300"></div>
@@ -38,9 +41,13 @@ const Home = () => {
           <div className="flex-grow border-t border-gray-300"></div>
         </div>
 <Carousal/>
+<br/>
+<br/>
+<br/>
+<br/>
 
-      </div>
             <Footer/>
+      </div>
         </>
     );
 };

@@ -34,17 +34,17 @@ const Claims = () => {
   const [claims, setClaims] = useState([
     {
       policyNo: "POL001",
-      policyName: "Life Coverage",
+      policyName: "VitalFuture Protection Plan",
       planMonths: 12,
       planYears: 1,
       policyHolderName: "John Doe",
       nominee: "Jane Doe",
       reasonForClaim: "Accidental Death",
-      status: "", // "Will Contact Soon" or "Denied"
+      status: "", 
     },
     {
       policyNo: "POL002",
-      policyName: "Health Coverage",
+      policyName: "EcoGuard Family Coverage",
       planMonths: 24,
       planYears: 2,
       policyHolderName: "Alice Smith",
@@ -54,7 +54,7 @@ const Claims = () => {
     },
     {
       policyNo: "POL003",
-      policyName: "Car Insurance",
+      policyName: "LifLINE aSSURANCE Policy",
       planMonths: 6,
       planYears: 0,
       policyHolderName: "Charlie Brown",
@@ -81,9 +81,9 @@ const Claims = () => {
 
   const handleConfirm = () => {
     setClaims(claims.map(claim =>
-      claim.policyNo === selectedClaim.policyNo ? { ...claim, status: "Will Contact Soon" } : claim
+      claim.policyNo === selectedClaim.policyNo ? { ...claim, status: "Claim Accepted" } : claim
     ));
-    toast.success(`Claim ${selectedClaim.policyNo} will be contacted soon`);
+    toast.success(`Claim ${selectedClaim.policyNo} is Accepted`);
     setOpen(false);
   };
 
@@ -92,9 +92,9 @@ const Claims = () => {
       <Card>
         <CardHeader className='w-full flex flex-row justify-between items-center'>
           <CardTitle>Claims</CardTitle>
-          <Button onClick={() => setOpen(true)}>
+          {/* <Button onClick={() => setOpen(true)}>
             <Plus className='h-5 w-5 mr-2' /> Add Claim
-          </Button>
+          </Button> */}
         </CardHeader>
         <CardContent>
           <Table>
@@ -102,11 +102,11 @@ const Claims = () => {
               <TableRow>
                 <TableHead className="w-[100px]">Policy No</TableHead>
                 <TableHead>Policy Name</TableHead>
-                <TableHead>Plan (Months/Years)</TableHead>
+                <TableHead>Duration (Months/Years)</TableHead>
                 <TableHead>Policy Holder Name</TableHead>
                 <TableHead>Nominee</TableHead>
                 <TableHead>Reason for Claim</TableHead>
-                <TableHead className="text-right">Actions</TableHead>
+                <TableHead className="text-right w-[140px]">Actions</TableHead>
               </TableRow>
             </TableHeader>
             <TableBody>
@@ -119,8 +119,8 @@ const Claims = () => {
                   <TableCell>{claim.nominee}</TableCell>
                   <TableCell>{claim.reasonForClaim}</TableCell>
                   <TableCell className="text-right">
-                    {claim.status === "Will Contact Soon" && (
-                      <span className="text-green-500">Will Contact Soon</span>
+                    {claim.status === "Claim Accepted" && (
+                      <span className="text-green-500">Claim Accepted</span>
                     )}
                     {claim.status === "Denied" && (
                       <span className="text-red-500">Denied</span>
@@ -166,7 +166,7 @@ const Claims = () => {
             </div>
             <div className="grid grid-cols-4 items-center gap-4">
               <Label htmlFor="planMonths" className="text-right">
-                Plan (Months/Years)
+                Duration
               </Label>
               <Input id="planMonths" value={`${selectedClaim?.planMonths || ''} Months / ${selectedClaim?.planYears || ''} Years`} disabled className="col-span-3" />
             </div>

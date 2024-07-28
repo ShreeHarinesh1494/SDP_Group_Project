@@ -8,6 +8,7 @@ const AdminSignIn = ({ toggle }) => {
 
   const [username, setUsername] = useState('');
   const [password, setPassword] = useState('');
+  const navigate = useNavigate();
 
   const validation = (e) => {
     e.preventDefault();
@@ -33,6 +34,7 @@ const AdminSignIn = ({ toggle }) => {
         draggable: true,
         progress: undefined,
         theme: "colored",
+        onClose:()=>navigate('/admin/dashboard')
       });
       
     } else {
@@ -48,22 +50,18 @@ const AdminSignIn = ({ toggle }) => {
       });
     }
   };
-  const click1=()=>{
-    navigator('/admin/dashboard')
-  }
+  
 
   return (
     <>
-      {/* Highlight: Flex container to align image and form side by side */}
+      
       <div className="h-screen w-screen flex items-center justify-center">
-        {/* Image Section */}
-        {/* Highlight: Adjusted class names to properly align the image on the left */}
+        
         <div className="w-1/2 h-full">
           <img src={admin} alt="Sign In" className="w-full h-full object-cover" />
         </div>
         
-        {/* Form Section */}
-        {/* Highlight: Adjusted class names to properly align the form on the right */}
+        
         
         <div className="w-1/2 p-8 flex flex-col justify-center">
           <div className="form sign-in">
@@ -82,12 +80,12 @@ const AdminSignIn = ({ toggle }) => {
               className="w-96 p-3 text-lg text-white rounded-md"
               style={{ backgroundColor: '#57B894' }}
               onClick={validation}
-            //   onClick={click1}
+            
             >
             
-             <Link to='/admin/dashboard'>
+             
               Sign in
-           </Link>
+          
             </button>
             <ToastContainer
               position="bottom-right"
