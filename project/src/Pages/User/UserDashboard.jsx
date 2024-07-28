@@ -40,7 +40,7 @@ const UserDashboard = () => {
   const policies = [
     {
       policyNo: "POL001",
-      policyName: "Life Coverage",
+      policyName: "LifePlus Term Insurance",
       planMonths: 12,
       planYears: 1,
       policyHolderName: "John Doe",
@@ -52,7 +52,7 @@ const UserDashboard = () => {
     },
     {
       policyNo: "POL002",
-      policyName: "Health Coverage",
+      policyName: "LifePlus Whole Life Insurance",
       planMonths: 24,
       planYears: 2,
       policyHolderName: "Alice Smith",
@@ -64,7 +64,7 @@ const UserDashboard = () => {
     },
     {
       policyNo: "POL003",
-      policyName: "Car Insurance",
+      policyName: "LifePlus Universal Insurance",
       planMonths: 6,
       planYears: 0,
       policyHolderName: "Charlie Brown",

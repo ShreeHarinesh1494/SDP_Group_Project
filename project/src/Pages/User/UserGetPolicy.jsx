@@ -343,7 +343,7 @@ const UserGetPolicy = () => {
         />
       </div>
       <div>
-        <label className="block text-black dark:text-white">3-digit Pin No <span className="text-red-500">*</span></label>
+        <label className="block text-black dark:text-white">CVV <span className="text-red-500">*</span></label>
         <input
           type="password"
           name="pinNo"

@@ -1,6 +1,6 @@
 import React from 'react';
 import { Card, CardHeader, CardContent, CardTitle } from '@/components/ui/card';
-import { BarChart, Users, ClipboardCheck } from 'lucide-react';
+import { BarChart, Users, ClipboardCheck, User2, FileText } from 'lucide-react';
 import { Table, TableBody, TableHead, TableHeader, TableRow, TableCell } from '@/components/ui/table';
 
 const AdminDashboard = () => {
@@ -15,12 +15,12 @@ const AdminDashboard = () => {
         <DashboardCard
           title="Total Policies"
           value="5"
-          icon={<ClipboardCheck className="h-8 w-8 text-primary" />}
+          icon={<User2 className="h-8 w-8 text-primary" />}
         />
         <DashboardCard
           title="Pending Claims"
           value="24"
-          icon={<ClipboardCheck className="h-8 w-8 text-primary" />}
+          icon={<FileText className="h-8 w-8 text-primary" />}
         />
       </div>
       <div className="grid grid-cols-1 md:grid-cols-2 gap-6">

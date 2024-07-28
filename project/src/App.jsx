@@ -13,7 +13,7 @@ import UserDashboard from "./Pages/User/UserDashboard";
 import UserGetPolicy from "./Pages/User/UserGetPolicy";
 import UserSupport from "./Pages/User/UserSupport";
 import UserLayout from "./layout/UserLayout";
-import USerFAQ from "./Pages/User/UserFAQ";
+
 
 
 const App=()=>
@@ -39,7 +39,6 @@ const App=()=>
             <Route path="/user/dashboard" element={<UserDashboard/>}/>
             <Route path="/user/policy" element={<UserGetPolicy/>}/>
             <Route path="/user/support" element={<UserSupport/>}/>
-            <Route path="/user/faq" element={<USerFAQ/>}/>
           </Route>
           <Route path='*' element={<NotFound />} />
           
