@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
-import '../assets/css/Register.css'; // Assuming similar styles as Login.css
+import '../assets/css/Register.css'; 
 
 
 const SignUp = () => {
@@ -35,7 +35,7 @@ const SignUp = () => {
             return;
         }
 
-        // Example of a successful registration
+        
         toast.success('Registration successful!');
     };
 
@@ -58,7 +58,7 @@ const SignUp = () => {
                         <p className="text-sm mt-4 text-[#002D74]">Create a new account</p>
                         <form onSubmit={handleSubmit} className="flex flex-col gap-6 w-full">
                             <input 
-                                className="p-3 mt-8 rounded-xl border border-gray-300 focus:outline-none focus:ring-2 focus:ring-[#002D74] transition-all duration-300" 
+                                className="p-3 mt-8 rounded-xl border border-gray-300 focus:outline-none focus:ring-2 focus:ring-[#002D74] transition-all duration-300 text-black" 
                                 type="text" 
                                 name="name" 
                                 placeholder="Name"
@@ -66,7 +66,7 @@ const SignUp = () => {
                                 onChange={(e) => setName(e.target.value)}
                             />
                             <input 
-                                className="p-3 rounded-xl border border-gray-300 focus:outline-none focus:ring-2 focus:ring-[#002D74] transition-all duration-300" 
+                                className="p-3 rounded-xl border border-gray-300 focus:outline-none focus:ring-2 focus:ring-[#002D74] transition-all duration-300 text-black" 
                                 type="email" 
                                 name="email" 
                                 placeholder="Email"
@@ -75,7 +75,7 @@ const SignUp = () => {
                             />
                             <div className="relative">
                                 <input 
-                                    className="p-3 rounded-xl border border-gray-300 w-full focus:outline-none focus:ring-2 focus:ring-[#002D74] transition-all duration-300" 
+                                    className="p-3 rounded-xl border border-gray-300 w-full focus:outline-none focus:ring-2 focus:ring-[#002D74] transition-all duration-300 text-black" 
                                     type={passwordVisible ? "text" : "password"} 
                                     name="password" 
                                     placeholder="Password"
@@ -89,7 +89,7 @@ const SignUp = () => {
                             </div>
                             <div className="relative">
                                 <input 
-                                    className="p-3 rounded-xl border border-gray-300 w-full focus:outline-none focus:ring-2 focus:ring-[#002D74] transition-all duration-300" 
+                                    className="p-3 rounded-xl border border-gray-300 w-full focus:outline-none focus:ring-2 focus:ring-[#002D74] transition-all duration-300 text-black" 
                                     type={confirmPasswordVisible ? "text" : "password"} 
                                     name="confirmPassword" 
                                     placeholder="Confirm Password"

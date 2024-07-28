@@ -1,16 +1,16 @@
 import React, { useState } from "react";
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
-import { useNavigate } from 'react-router-dom'; // Import useNavigate
+import { useNavigate } from 'react-router-dom'; 
 import '../assets/css/Login.css';
 
 const SignIn = () => {
     const [passwordVisible, setPasswordVisible] = useState(false);
     const [name, setName] = useState('');
     const [password, setPassword] = useState('');
-    const [isAdmin, setIsAdmin] = useState(false); // State to toggle between user and admin forms
-    const [isRotated, setIsRotated] = useState(false); // State for rotation effect
-    const navigate = useNavigate(); // Initialize useNavigate
+    const [isAdmin, setIsAdmin] = useState(false); 
+    const [isRotated, setIsRotated] = useState(false);
+    const navigate = useNavigate(); 
 
     const togglePasswordVisibility = () => {
         setPasswordVisible(!passwordVisible);
@@ -68,6 +68,10 @@ const SignIn = () => {
                     draggable: true,
                     theme: "light",
                 });
+
+                setTimeout(() => {
+                    navigate('/user/dashboard');
+                }, 2000);
             }
         } else {
             if (name !== 'admin') {
@@ -106,10 +110,10 @@ const SignIn = () => {
                 theme: "light",
             });
 
-            // Redirect to admin dashboard
+            
             setTimeout(() => {
                 navigate('/admin/dashboard');
-            }, 2000); // Delay to match toast duration
+            }, 2000); 
         }
     };
 
@@ -117,25 +121,27 @@ const SignIn = () => {
         setIsRotated(true);
         setTimeout(() => {
             setIsAdmin(true);
-            // Clear user form fields and errors
+            
             setName('');
             setPassword('');
-        }, 500); // Delay to allow for the rotation effect
+        }, 500); 
     };
 
     const handleUserClick = () => {
         setIsRotated(false);
         setTimeout(() => {
             setIsAdmin(false);
-            // Clear admin form fields and errors
+            
             setName('');
             setPassword('');
-        }, 500); // Delay to allow for the rotation effect
+        }, 500); 
     };
 
     const handleRegisterClick = () => {
         navigate('/register');
     };
+
+    
 
     const renderForm = () => {
         if (isAdmin) {
@@ -145,7 +151,7 @@ const SignIn = () => {
                     <p className="text-sm mt-4 text-[#002D74]">Admin portal access</p>
                     <form action="" onSubmit={handleSubmit} className="flex flex-col gap-6">
                         <input 
-                            className="p-3 mt-8 rounded-xl border border-gray-300 focus:outline-none focus:ring-2 focus:ring-[#002D74] transition-all duration-300" 
+                            className="p-3 mt-8 rounded-xl border border-gray-300 focus:outline-none focus:ring-2 focus:ring-[#002D74] transition-all duration-300 text-black dark:text-black" 
                             type="text" 
                             name="name" 
                             placeholder="Admin Name"
@@ -154,7 +160,7 @@ const SignIn = () => {
                         />
                         <div className="relative">
                             <input 
-                                className="p-3 rounded-xl border border-gray-300 w-full focus:outline-none focus:ring-2 focus:ring-[#002D74] transition-all duration-300" 
+                                className="p-3 rounded-xl border border-gray-300 w-full focus:outline-none focus:ring-2 focus:ring-[#002D74] transition-all duration-300 text-black" 
                                 type={passwordVisible ? "text" : "password"} 
                                 name="password" 
                                 placeholder="Password"
@@ -182,7 +188,7 @@ const SignIn = () => {
                 <p className="text-sm mt-4 text-[#002D74]">If you are already a member, easily log in</p>
                 <form action="" onSubmit={handleSubmit} className="flex flex-col gap-6">
                     <input 
-                        className="p-3 mt-8 rounded-xl border border-gray-300 focus:outline-none focus:ring-2 focus:ring-[#002D74] transition-all duration-300" 
+                        className="p-3 mt-8 rounded-xl border border-gray-300 focus:outline-none focus:ring-2 focus:ring-[#002D74] transition-all duration-300 text-black" 
                         type="text" 
                         name="name" 
                         placeholder="Name"
@@ -191,7 +197,7 @@ const SignIn = () => {
                     />
                     <div className="relative">
                         <input 
-                            className="p-3 rounded-xl border border-gray-300 w-full focus:outline-none focus:ring-2 focus:ring-[#002D74] transition-all duration-300" 
+                            className="p-3 rounded-xl border border-gray-300 w-full focus:outline-none focus:ring-2 focus:ring-[#002D74] transition-all duration-300 text-black" 
                             type={passwordVisible ? "text" : "password"} 
                             name="password" 
                             placeholder="Password"

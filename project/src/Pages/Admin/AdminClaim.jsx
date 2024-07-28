@@ -40,7 +40,7 @@ const AdminClaim = () => {
       policyHolderName: "John Doe",
       nominee: "Jane Doe",
       reasonForClaim: "Accidental Death",
-      status: "", // "Will Contact Soon" or "Denied"
+      status: "", 
     },
     {
       policyNo: "POL002",
@@ -50,7 +50,7 @@ const AdminClaim = () => {
       policyHolderName: "Alice Smith",
       nominee: "Bob Smith",
       reasonForClaim: "Hospitalization",
-      status: "", // "Will Contact Soon" or "Denied"
+      status: "",
     },
     {
       policyNo: "POL003",
@@ -60,9 +60,9 @@ const AdminClaim = () => {
       policyHolderName: "Charlie Brown",
       nominee: "Lucy Brown",
       reasonForClaim: "Vehicle Theft",
-      status: "", // "Will Contact Soon" or "Denied"
+      status: "", 
     },
-    // Add more claims as needed
+    
   ]);
 
   const handleAccept = (claim) => {
@@ -81,9 +81,9 @@ const AdminClaim = () => {
 
   const handleConfirm = () => {
     setClaims(claims.map(claim =>
-      claim.policyNo === selectedClaim.policyNo ? { ...claim, status: "Will Contact Soon" } : claim
+      claim.policyNo === selectedClaim.policyNo ? { ...claim, status: "Claim Accepted" } : claim
     ));
-    toast.success(`Claim ${selectedClaim.policyNo} will be contacted soon`);
+    toast.success(`Claim ${selectedClaim.policyNo} is Accepted`);
     setOpen(false);
   };
 
@@ -92,9 +92,6 @@ const AdminClaim = () => {
       <Card>
         <CardHeader className='w-full flex flex-row justify-between items-center'>
           <CardTitle>Claims</CardTitle>
-          <Button onClick={() => setOpen(true)}>
-            <Plus className='h-5 w-5 mr-2' /> Add Claim
-          </Button>
         </CardHeader>
         <CardContent>
           <Table>
@@ -196,7 +193,7 @@ const AdminClaim = () => {
         </SheetContent>
       </Sheet>
 
-      {/* Toast Container */}
+      
       <ToastContainer />
     </>
   );

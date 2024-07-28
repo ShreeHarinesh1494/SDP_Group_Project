@@ -24,16 +24,16 @@ const Footer = () => {
           </address>
         </div>
         <div className='flex gap-6 mt-4 md:mt-0'>
-          <a href='#' target='_blank' className='h-10 w-10 rounded-full text-primary hover:bg-primary/30 hover:text-background flex justify-center items-center transition-all transform hover:scale-110'>
+          <a href='https://www.facebook.com/' target='_blank' className='h-10 w-10 rounded-full text-primary hover:bg-primary/30 hover:text-background flex justify-center items-center transition-all transform hover:scale-110'>
             <Facebook className='h-6 w-6' />
           </a>
-          <a href='#' target='_blank' className='h-10 w-10 rounded-full text-primary hover:bg-primary/30 hover:text-background flex justify-center items-center transition-all transform hover:scale-110'>
+          <a href='https://www.twitter.com/' target='_blank' className='h-10 w-10 rounded-full text-primary hover:bg-primary/30 hover:text-background flex justify-center items-center transition-all transform hover:scale-110'>
             <Twitter className='h-6 w-6' />
           </a>
-          <a href='#' target='_blank' className='h-10 w-10 rounded-full text-primary hover:bg-primary/30 hover:text-background flex justify-center items-center transition-all transform hover:scale-110'>
+          <a href='https://www.github.com/' target='_blank' className='h-10 w-10 rounded-full text-primary hover:bg-primary/30 hover:text-background flex justify-center items-center transition-all transform hover:scale-110'>
             <GithubIcon className='h-6 w-6' />
           </a>
-          <a href='#' target='_blank' className='h-10 w-10 rounded-full text-primary hover:bg-primary/30 hover:text-background flex justify-center items-center transition-all transform hover:scale-110'>
+          <a href='https://www.linkedin.com/' target='_blank' className='h-10 w-10 rounded-full text-primary hover:bg-primary/30 hover:text-background flex justify-center items-center transition-all transform hover:scale-110'>
             <LinkedinIcon className='h-6 w-6' />
           </a>
         </div>

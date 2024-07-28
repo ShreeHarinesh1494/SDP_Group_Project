@@ -42,7 +42,7 @@ const AdminUsers = () => {
       policyHolderPAN: "ABCDE1234F",
       nominee: "Jane Doe",
       amount: "$500,000",
-      status: "", // "Accepted" or "Denied"
+      status: "", 
     },
     {
       policyNo: "POL002",
@@ -54,7 +54,7 @@ const AdminUsers = () => {
       policyHolderPAN: "XYZAB5678C",
       nominee: "Bob Smith",
       amount: "$300,000",
-      status: "", // "Accepted" or "Denied"
+      status: "",
     },
     {
       policyNo: "POL003",
@@ -66,9 +66,9 @@ const AdminUsers = () => {
       policyHolderPAN: "LMNOP1234D",
       nominee: "Lucy Brown",
       amount: "$150,000",
-      status: "", // "Accepted" or "Denied"
+      status: "",
     },
-    // Add more policies as needed
+    
   ]);
 
   const handleAccept = (policyNo) => {
@@ -99,9 +99,6 @@ const AdminUsers = () => {
       <Card>
         <CardHeader className='w-full flex flex-row justify-between items-center'>
           <CardTitle>Policies</CardTitle>
-          <Button onClick={() => setOpen(true)}>
-            <Plus className='h-5 w-5 mr-2' /> Add Policy
-          </Button>
         </CardHeader>
         <CardContent>
           <Table>
@@ -219,7 +216,7 @@ const AdminUsers = () => {
         </SheetContent>
       </Sheet>
 
-      {/* Toast Container */}
+      
       <ToastContainer />
     </>
   );

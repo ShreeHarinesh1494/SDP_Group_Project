@@ -17,11 +17,6 @@ const UserLeftbar = () => {
       icon: <FileText className='mr-2' />,
     },
     {
-      title: 'Expert Support',
-      link: '/user/support',
-      icon: <Headphones className='mr-2' />,
-    },
-    {
       title: 'FAQ',
       link: '/user/faq',
       icon: <HelpCircle className='mr-2' />,
