@@ -3,8 +3,8 @@ import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import Navbar from './components/web/Navbar'; 
 import Footer from './components/web/Footer'; 
  import LandingPage from './Pages/Landingpage';
-import Login from './components/web/Login'; // Ensure file name is Login.jsx
-import Register from './components/web/Register'; // Ensure file name is Register.jsx
+import Login from './components/web/Login';
+import Register from './components/web/Register';
 
 function App() {
   return (
@@ -15,6 +15,7 @@ function App() {
           <Routes>
             <Route path="/" element={<LandingPage />} />
             <Route path="/login" element={<Login />} />
+            
             <Route path="/register" element={<Register />} />
           </Routes>
         </main>
