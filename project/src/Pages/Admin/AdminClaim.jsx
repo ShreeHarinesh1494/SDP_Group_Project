@@ -40,7 +40,7 @@ const AdminClaim = () => {
       policyHolderName: "John Doe",
       nominee: "Jane Doe",
       reasonForClaim: "Accidental Death",
-      status: "", 
+      status: "", // "Will Contact Soon" or "Denied"
     },
     {
       policyNo: "POL002",
@@ -50,7 +50,7 @@ const AdminClaim = () => {
       policyHolderName: "Alice Smith",
       nominee: "Bob Smith",
       reasonForClaim: "Hospitalization",
-      status: "",
+      status: "", 
     },
     {
       policyNo: "POL003",
@@ -81,7 +81,7 @@ const AdminClaim = () => {
 
   const handleConfirm = () => {
     setClaims(claims.map(claim =>
-      claim.policyNo === selectedClaim.policyNo ? { ...claim, status: "Claim Accepted" } : claim
+      claim.policyNo === selectedClaim.policyNo ? { ...claim, status: "Accepted" } : claim
     ));
     toast.success(`Claim ${selectedClaim.policyNo} is Accepted`);
     setOpen(false);
@@ -116,8 +116,8 @@ const AdminClaim = () => {
                   <TableCell>{claim.nominee}</TableCell>
                   <TableCell>{claim.reasonForClaim}</TableCell>
                   <TableCell className="text-right">
-                    {claim.status === "Will Contact Soon" && (
-                      <span className="text-green-500">Will Contact Soon</span>
+                    {claim.status === "Accepted" && (
+                      <span className="text-green-500">Accepted</span>
                     )}
                     {claim.status === "Denied" && (
                       <span className="text-red-500">Denied</span>
@@ -193,7 +193,7 @@ const AdminClaim = () => {
         </SheetContent>
       </Sheet>
 
-      
+      {/* Toast Container */}
       <ToastContainer />
     </>
   );
