@@ -15,7 +15,7 @@ import HomeLayout from './layout/HomeLayout'
 import AdminSignIn from './pages/Shared/AdminSignIn'
 import Users  from './pages/Admin/Users'
 import Claims from './pages/Admin/Claims'
-
+import Policies from './pages/Admin/Policies'
 
 const App = () => {
     return (
@@ -41,6 +41,7 @@ const App = () => {
                         <Route path='/admin/dashboard' element={<AdminDashboard />} />
                         <Route path='/admin/users' element={<Users />} />
                         <Route path='/admin/claims' element={<Claims />} />
+                        <Route path='/admin/policies' element={<Policies />} />
                     </Route>
 
                     <Route path='*' element={<NotFound />} />

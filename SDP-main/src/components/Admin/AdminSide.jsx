@@ -1,6 +1,6 @@
 import React from 'react'
 import { Link, NavLink } from 'react-router-dom'
-import { LayoutDashboard,User,HandCoins,LogOut } from 'lucide-react'
+import { LayoutDashboard,User,HandCoins,LogOut,SearchCheck } from 'lucide-react'
 
 const AdminSide = () => {
     const AdminLinks=[
@@ -18,6 +18,11 @@ const AdminSide = () => {
             title:'Claims',
             link:'/admin/claims',
             icon:HandCoins
+        },
+        {
+            title:'Policies',
+            link:'/admin/policies',
+            icon:SearchCheck
         }
         
     ]

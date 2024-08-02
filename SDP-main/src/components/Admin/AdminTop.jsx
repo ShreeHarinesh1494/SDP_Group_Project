@@ -20,7 +20,7 @@ import { ModeToggle } from '../mode-toggle'
  </div>
         <Avatar>
   <AvatarImage src="https://github.com/shadcn.png" />
-  <AvatarFallback>CN</AvatarFallback>
+  <AvatarFallback>SS</AvatarFallback>
 </Avatar>
         <ModeToggle/>
 
