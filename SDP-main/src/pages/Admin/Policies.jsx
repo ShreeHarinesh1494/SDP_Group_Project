@@ -117,9 +117,9 @@ const Policies = () => {
                   <TableCell>{policy.duration}</TableCell>
                   <TableCell className="text-right">{policy.amount}</TableCell>
                   <TableCell className="text-right">
-                    <Button variant="ghost" size="icon" className="mr-2" onClick={() => openEditSheet(policy)}>
+                    {/* <Button variant="ghost" size="icon" className="mr-2" onClick={() => openEditSheet(policy)}>
                       <Edit className="h-4 w-4 text-blue-500" />
-                    </Button>
+                    </Button> */}
                     <Button variant="ghost" size="icon" className="text-red-600" onClick={() => handleDeletePolicy(policy)}>
                       <Trash2 className="h-4 w-4" />
                     </Button>
@@ -177,12 +177,12 @@ const Policies = () => {
               />
             </div>
           </div>
-          <SheetFooter className='flex flex-col flex-1'>
-            <Button className='w-1/2 bg-destructive hover:bg-destructive/80' onClick={() => setOpen(false)}>Cancel</Button>
-            <Button type="button" className='w-1/2' onClick={editMode ? handleEditPolicy : handleAddPolicy}>
-              {editMode ? "Edit" : "Submit"}
-            </Button>
-          </SheetFooter>
+          <SheetFooter className='flex flex-col flex-1'> 
+            <Button className='w-1/2 bg-destructive hover:bg-destructive/80' onClick={() => setOpen(false)}>Cancel</Button> 
+            <Button type="button" className='w-1/2' onClick={editMode ? handleEditPolicy : handleAddPolicy}> 
+             {editMode ? "Edit" : "Submit"} 
+            </Button> 
+           </SheetFooter>
         </SheetContent>
       </Sheet>
 
