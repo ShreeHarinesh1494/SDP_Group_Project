@@ -37,5 +37,11 @@ public class PolicyController {
         return ResponseEntity.ok(policyService.findPolicyById(policyID));
     }
 
+    @DeleteMapping("/{policyID}")
+    public ResponseEntity<String> deletePolicyById(@PathVariable Long policyID) {
+        policyService.deletePolicyById(policyID);
+        return ResponseEntity.ok("Policy deleted successfully");  
+    }
+
 }
 
