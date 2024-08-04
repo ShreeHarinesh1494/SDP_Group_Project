@@ -24,6 +24,9 @@ public class PolicyService {
     public Policy findPolicyById(Long policyID) {
         return policyRepository.findById(policyID).orElse(null);
     }
+    public void deletePolicyById(Long policyID) {
+        policyRepository.deleteById(policyID);
+    }
 }
 
 
