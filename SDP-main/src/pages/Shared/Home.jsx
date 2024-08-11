@@ -7,6 +7,7 @@ import AnimatedCounter from '@/components/Shared/AnimatedCounter';
 import Carousal from '@/components/Shared/Carousal';
 import Aboutus from '@/components/Shared/Aboutus';
 import PolicyCards from '@/components/Shared/PolicyCards';
+import Feedback from '@/components/Shared/feedback';
 const Home = () => {
     return (
         <>
@@ -41,6 +42,19 @@ const Home = () => {
           <div className="flex-grow border-t border-gray-300"></div>
         </div>
 <Carousal/>
+<br/>
+<br/>
+<div className="mx-auto p-4">
+           
+{/* <div className="relative -mt-5"> Adjust the -mt-10 value to reduce space */}
+        <div className="flex items-center justify-center my-8 relative"> {/* Adjust my-8 to reduce vertical spacing */}
+          <div className="flex-grow border-t border-gray-300"></div>
+          <span className="mx-4 text-4xl font-semibold">Feedback</span>
+          <div className="flex-grow border-t border-gray-300"></div>
+        </div>
+
+            <Feedback />
+        </div>
 <br/>
 <br/>
 <br/>

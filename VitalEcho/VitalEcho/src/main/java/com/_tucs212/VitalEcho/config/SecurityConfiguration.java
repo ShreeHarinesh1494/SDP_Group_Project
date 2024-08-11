@@ -23,8 +23,7 @@ public class SecurityConfiguration {
 
     private final JwtAuthenticationFilter jwtAuthFilter;
     private final AuthenticationProvider authenticationProvider;
-    private final LogoutHandler logoutHandler;
-    private final LogoutSuccessHandler logoutSuccessHandler;
+    
 
     private static final String[] PublicEndPoints = {
             "api/v1/auth/**"
@@ -43,12 +42,12 @@ public class SecurityConfiguration {
                                 .maximumSessions(1)
                 )
                 .authenticationProvider(authenticationProvider)
-                .addFilterBefore(jwtAuthFilter, UsernamePasswordAuthenticationFilter.class)
-                .logout(logout -> logout
-                        .logoutUrl("/api/v1/auth/logout")
-                        .addLogoutHandler(logoutHandler)
-                        .logoutSuccessHandler(logoutSuccessHandler)
-                );
+                .addFilterBefore(jwtAuthFilter, UsernamePasswordAuthenticationFilter.class);
+//                 .logout(logout -> logout
+//                         .logoutUrl("/api/v1/auth/logout")
+//                         .addLogoutHandler(logoutHandler)
+//                         .logoutSuccessHandler(logoutSuccessHandler)
+//                 );
 
         return http.build();
 
