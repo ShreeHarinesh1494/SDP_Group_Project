@@ -7,6 +7,7 @@ import { ShieldPlus } from 'lucide-react';
 import React,{useState} from 'react';
 import { toast, ToastContainer } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
+import axios from 'axios';
 
 const Home = () => {
   const [formData, setFormData] = useState({
@@ -22,14 +23,19 @@ const Home = () => {
     });
   };
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
-    toast.success('Form submitted successfully!');
-    setFormData({
-      name: '',
-      contact: '',
-      email: '',
-    });
+    try {
+      await axios.post('http://localhost:8080/api/contact', formData); // Update URL based on your backend setup
+      toast.success('Form submitted successfully!');
+      setFormData({
+        name: '',
+        contact: '',
+        email: '',
+      });
+    } catch (error) {
+      toast.error('Failed to submit form. Please try again.');
+    }
   };
   return (
     <>
@@ -152,52 +158,52 @@ const Home = () => {
           </div>
         </section>
 
-      <section id="contact-form" className="bg-[hsl(var(--muted))] text-[hsl(var(--muted-foreground))] py-16">
-        <div className="container mx-auto px-6">
-          <h2 className="text-3xl font-bold text-center mb-8">Contact Us</h2>
-          <form onSubmit={handleSubmit} className="max-w-lg mx-auto bg-[hsl(var(--card))] text-[hsl(var(--card-foreground))] p-8 rounded-lg shadow-lg border border-black dark:border-white">
-            <div className="mb-4">
-              <label htmlFor="name" className="block text-lg font-semibold mb-2">Name</label>
-              <input 
-                type="text" 
-                id="name" 
-                name="name" 
-                required 
-                value={formData.name}
-                onChange={handleChange}
-                className="w-full p-2 border border-black dark:border-white rounded-lg" 
-              />
-            </div>
-            <div className="mb-4">
-              <label htmlFor="contact" className="block text-lg font-semibold mb-2">Contact No</label>
-              <input 
-                type="tel" 
-                id="contact" 
-                name="contact" 
-                required 
-                value={formData.contact}
-                onChange={handleChange}
-                className="w-full p-2 border border-black dark:border-white rounded-lg" 
-              />
-            </div>
-            <div className="mb-4">
-              <label htmlFor="email" className="block text-lg font-semibold mb-2">Email</label>
-              <input 
-                type="email" 
-                id="email" 
-                name="email" 
-                required 
-                value={formData.email}
-                onChange={handleChange}
-                className="w-full p-2 border border-black dark:border-white rounded-lg" 
-              />
-            </div>
-            <button type="submit" className="bg-[hsl(var(--primary))] text-[hsl(var(--primary-foreground))] py-3 px-6 rounded-lg text-lg font-semibold hover:bg-[hsl(var(--primary-foreground))] hover:text-[hsl(var(--primary))] transition w-full">
-              Submit
-            </button>
-          </form>
-        </div>
-      </section>
+        <section id="contact-form" className="bg-[hsl(var(--muted))] text-[hsl(var(--muted-foreground))] py-16">
+          <div className="container mx-auto px-6">
+            <h2 className="text-3xl font-bold text-center mb-8">Contact Us</h2>
+            <form onSubmit={handleSubmit} className="max-w-lg mx-auto bg-[hsl(var(--card))] text-[hsl(var(--card-foreground))] p-8 rounded-lg shadow-lg border border-black dark:border-white">
+              <div className="mb-4">
+                <label htmlFor="name" className="block text-lg font-semibold mb-2">Name</label>
+                <input 
+                  type="text" 
+                  id="name" 
+                  name="name" 
+                  required 
+                  value={formData.name}
+                  onChange={handleChange}
+                  className="w-full p-2 border border-black dark:border-white rounded-lg" 
+                />
+              </div>
+              <div className="mb-4">
+                <label htmlFor="contact" className="block text-lg font-semibold mb-2">Contact No</label>
+                <input 
+                  type="tel" 
+                  id="contact" 
+                  name="contact" 
+                  required 
+                  value={formData.contact}
+                  onChange={handleChange}
+                  className="w-full p-2 border border-black dark:border-white rounded-lg" 
+                />
+              </div>
+              <div className="mb-4">
+                <label htmlFor="email" className="block text-lg font-semibold mb-2">Email</label>
+                <input 
+                  type="email" 
+                  id="email" 
+                  name="email" 
+                  required 
+                  value={formData.email}
+                  onChange={handleChange}
+                  className="w-full p-2 border border-black dark:border-white rounded-lg" 
+                />
+              </div>
+              <button type="submit" className="bg-[hsl(var(--primary))] text-[hsl(var(--primary-foreground))] py-3 px-6 rounded-lg text-lg font-semibold hover:bg-[hsl(var(--primary-foreground))] hover:text-[hsl(var(--primary))] transition w-full">
+                Submit
+              </button>
+            </form>
+          </div>
+        </section>
         
         <section id="contact" className="bg-[hsl(var(--primary))] text-[hsl(var(--primary-foreground))] py-20">
           <div className="container mx-auto px-6 text-center">
